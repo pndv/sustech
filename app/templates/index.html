@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>BitFolium</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/img/bitfolium/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/assets/img/bitfolium/favicon32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/img/bitfolium/favicon16x16.png">
+	<link rel="manifest" href="../static/assets/img/bitfolium/favicon_manifest.json">
+    <meta name="msapplication-TileImage" content="../static/assets/img/bitfolium/favicon_mstile-150x150.png">
+	-->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/bitfolium/favicon.ico">
+    
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script src="../static/assets/js/config.navbar-vertical.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="../static/assets/lib/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet">
+    <link href="../static/assets/lib/select2/select2.min.css" rel="stylesheet">
+    <link href="../static/assets/lib/flatpickr/flatpickr.min.css" rel="stylesheet">
+    <link href="../static/assets/lib/dropzone/dropzone.min.css" rel="stylesheet">
+    <link href="../static/assets/css/theme.css" rel="stylesheet">
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+
+
+      <div class="container" data-layout="container">
+        <nav class="navbar navbar-vertical navbar-expand-xl navbar-light">
+          <div class="d-flex align-items-center">
+            <div class="toggle-icon-wrapper" style="margin-right:1.15rem;">
+
+              <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-toggle="tooltip" data-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+
+            </div><a class="navbar-brand" href="/">
+              <div class="d-flex align-items-center py-3"><img class="mr-2" src="../static/assets/img/bitfolium/logo-dark.png" alt="" height="32" />
+              </div>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+            <div class="navbar-vertical-content perfect-scrollbar scrollbar">
+              <ul class="navbar-nav flex-column">
+                <li class="nav-item">
+					<a class="nav-link" href="/">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon">
+								<span class="fas fa-home"></span>
+							</span>
+							<span class="nav-link-text"> Home</span>
+						</div>
+                    </a>
+				</li>
+              </ul>
+			  <ul class="navbar-nav flex-column">
+                <li class="nav-item">
+					<a class="nav-link" href="/createEvent">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon">
+								<span class="fas fa-calendar-plus"></span>
+							</span>
+							<span class="nav-link-text"> Create Event</span>
+						</div>
+                    </a>
+				</li>
+              </ul>
+			  
+       
+              <div class="navbar-vertical-divider">
+                <hr class="navbar-vertical-hr my-2" />
+              </div>
+   
+            </div>
+          </div>
+        </nav>
+        
+		
+		
+		<div class="content">
+         <nav class="navbar navbar-light navbar-glass navbar-top sticky-kit navbar-expand" style="height:70px;">
+
+            <button class="btn navbar-toggler-humburger-icon navbar-toggler mr-1 mr-sm-3" type="button" data-toggle="collapse" data-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+            <a class="navbar-brand mr-1 mr-sm-3" href="/">
+              <div class="d-flex align-items-center"><img class="mr-2" src="../static/assets/img/bitfolium/logo-dark.png" alt="" height="32" />
+              </div>
+            </a>
+           
+          </nav>
+		  
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-md">
+                  <h5 class="mb-2 mb-md-0">Admin Control Panel</h5>
+                </div>
+
+              </div>
+            </div>
+			<div class="card-footer d-flex justify-content-center bg-light text-center pt-4">
+              <div class="col-10">
+                <h4 class="font-weight-normal mb-3 fs-1 fs-md-2">Connected to main BitFolium database</h4>
+                <div class="form-row my-4">
+                  <div class="col-xl-4">
+                    <a href = "/exportUsers" class="btn btn-falcon-default btn-block mb-2 mb-xl-0">
+						<span class="fas fa-users " data-fa-transform="grow-2"></span>
+						<span class="font-weight-medium ml-2">Export Users</span>
+					</a>
+                  </div>
+                  <div class="col-xl-4">
+                    <button class="btn btn-falcon-default btn-block mb-2 mb-xl-0" data-toggle="modal" data-target="#copyLinkModal">
+						<span class="fas fa-calendar-alt text-700"></span>
+						<span class="font-weight-medium ml-2">Get RSVP</span>
+					</button>
+					
+                    <div class="modal fade" id="copyLinkModal" tabindex="-1" role="dialog" aria-labelledby="copyLinkModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content overflow-hidden">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="copyLinkModalLabel">RSVP Viewer</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="font-weight-light" aria-hidden="true">&times;</span></button>
+                          </div>
+						  <form action = "/viewRSVP" method="POST">
+							  <div class="modal-body bg-light p-4">
+								
+								  <div class="form-group">
+									<label for="exampleFormControlSelect1">Select the date to look for RSVP</label>
+									<select class="form-control" id="exampleFormControlSelect1" name = "dateOption">
+									  {% for eventDate in dates%}
+									  <option>{{eventDate[0]}} - {{eventDate[1]}}</option>
+									  {% endfor %}
+									</select>
+								  </div>
+								
+							  </div>
+							  <div class="modal-footer" >
+								  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+								  <button type="submit" class="btn btn-primary">View</button>
+							   </div>
+						   </form>
+                        </div>
+                      </div>
+                    </div>
+					
+                  </div>
+                  <div class="col-xl-4">
+                    <button class="btn btn-falcon-default btn-block mb-2 mb-xl-0" disabled>
+						<span class="fab fa-github " data-fa-transform="grow-2"></span>
+						<span class="font-weight-medium ml-2">Latest Update</span>
+					</button>
+                  </div>
+                </div>
+                <p class="mb-2 fs--1">Let me know <b>ASAP</b> if something breaks or have any questions.</p>
+              </div>
+            </div>
+          </div>
+
+          <footer>
+            <div class="row no-gutters justify-content-between fs--1 mt-4 mb-3">
+              <div class="col-12 col-sm-auto text-center">
+                <p class="mb-0 text-600">&copy; 2020-2021 all rights reserved. A product of <a href="https://www.bytesandbots.com" target="_blank">Bytes & Bots</a></p>
+              </div>
+             
+            </div>
+          </footer>
+        </div>
+        
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../static/assets/js/jquery.min.js"></script>
+    <script src="../static/assets/js/popper.min.js"></script>
+    <script src="../static/assets/js/bootstrap.min.js"></script>
+    <script src="../static/assets/lib/@fortawesome/all.min.js"></script>
+    <script src="../static/assets/lib/stickyfilljs/stickyfill.min.js"></script>
+    <script src="../static/assets/lib/sticky-kit/sticky-kit.min.js"></script>
+    <script src="../static/assets/lib/is_js/is.min.js"></script>
+    <script src="../static/assets/lib/lodash/lodash.min.js"></script>
+    <script src="../static/assets/lib/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <script src="../static/assets/lib/select2/select2.min.js"></script>
+    <script src="../static/assets/lib/flatpickr/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.7/polyfill.min.js"></script>
+    <script src="../static/assets/lib/dropzone/dropzone.min.js"></script>
+    <script src="../static/assets/js/theme.js"></script>
+
+  </body>
+
+</html>
