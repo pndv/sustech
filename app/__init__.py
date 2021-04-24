@@ -1,4 +1,7 @@
-import flask
+import flask, requests, json
+import jinja2
+from authlib.flask.client import OAuth
+from flask import jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = flask.Flask(__name__)
@@ -6,6 +9,7 @@ app = flask.Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///test.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = 'False'
 db = SQLAlchemy(app)
+db.create_all()
 
 
 class Info(db.model):
