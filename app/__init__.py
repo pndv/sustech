@@ -12,7 +12,7 @@ db = SQLAlchemy(app)
 db.create_all()
 
 
-class Info(db.model):
+class Info(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     temp = db.Column(db.String(5), unique=False, nullable=False)
     status = db.Column(db.String(3), unique=False, nullable=False)
